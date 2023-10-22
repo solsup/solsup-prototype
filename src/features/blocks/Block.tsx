@@ -12,8 +12,14 @@ function Block({ blockId, onDragStart }: IBlockProps) {
   if (!block) return null;
 
   return (
-    <rect x={block.pos.value[0]} y={block.pos.value[1]} width="100" height="100" fill="red"
-     onMouseDown={onDragStart}
+   <path d="M.661.662v31.75h6.35v6.35h6.35v-6.35h158.75V.662H13.361v6.35h-6.35V.664Z"
+      style={{
+        fill: "teal",
+        stroke: "#006868",
+        strokeWidth: 1.2,
+      }}
+      onMouseDown={onDragStart}
+      transform={`translate(${block.pos.value[0]} ${block.pos.value[1]})`}
     />
   )
 }
